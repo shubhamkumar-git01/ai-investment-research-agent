@@ -73,6 +73,25 @@ graph TD
 - **Backend/AI**: LangGraph, LangChain, Google Gemini API
 - **Data Integration**: Yahoo Finance (yahoo-finance2)
 
+## ⚖️ Key Decisions & Trade-offs
+- **Why LangGraph over standard LangChain chains?** I chose LangGraph because financial research is inherently cyclical and stateful. The agent needs to first fetch the ticker, then fetch financials, then news, and only then synthesize. LangGraph provides a robust state machine that makes passing data between these discrete reasoning nodes predictable and debuggable.
+- **Why Gemini 1.5 Flash?** For a real-time web application, latency is critical. While larger models (like Gemini Pro or GPT-4) might offer marginally deeper reasoning, Gemini 1.5 Flash provides an exceptional balance of high-quality financial synthesis and blazing-fast response times, ensuring a premium user experience.
+- **Trade-off: Live Data vs. Stored Database:** I intentionally left out a permanent database (like PostgreSQL/Supabase) to store past reports. The goal was to build a *real-time* agent. Storing reports would require user authentication and add unnecessary complexity for a tool designed to provide on-the-fly analysis.
+
+## 📈 Example Runs
+The agent performs exceptionally well on both tech giants and regional conglomerates. Here are a few examples of outputs tested during development:
+1. **Apple (AAPL):** Successfully identified the heavy reliance on iPhone sales as a risk, while highlighting the high-margin Services segment as a massive opportunity for growth. Recommendation: BUY with 85% confidence.
+2. **Tesla (TSLA):** The AI correctly pulled in recent news about EV pricing pressures and margins dropping, contrasting it with their strong AI/Robotics narrative. Recommendation: HOLD with 70% confidence.
+3. **Reliance Industries (RELIANCE.NS):** The agent accurately captured their diversified moat across Telecom (Jio), Retail, and Oil-to-Chemicals.
+
+## 🔮 What I would improve with more time
+- **Multi-Agent Collaboration:** I would introduce a "Critic Agent" that challenges the primary analyst's recommendation to reduce AI hallucination or confirmation bias.
+- **Quantitative Charts:** Integrate an interactive library (like Recharts) to plot the last 12 months of stock price data alongside the AI's textual reasoning.
+- **PDF/CSV Ingestion:** Allow users to upload a company's 10-K report for the agent to use in conjunction with live web data for even deeper analysis.
+
+## 🤖 Bonus: LLM Chat Logs Included
+As per the assignment requirements, the complete chat session transcript/logs detailing my thought process and collaboration with the AI assistant during the development of this project are included in the `.zip` submission folder.
+
 ---
 <div align="center">
   <i>Developed for the InsideIIM AI Labs Assignment v1.0</i>
