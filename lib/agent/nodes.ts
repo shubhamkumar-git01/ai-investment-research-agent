@@ -105,9 +105,9 @@ export async function analyzeCompanyNode(state: typeof AgentState.State) {
 
   const model = getModel();
   
-  const prompt = `You are a professional financial analyst.
-Based on the following data, write a comprehensive 2-3 paragraph overview of the company, its business model, and its core industry context.
-If financial data description is available, use it, but expand it to sound like an executive summary.
+  const prompt = `You are a top-tier Wall Street financial analyst.
+Based on the following data, write a highly comprehensive and professional Executive Overview of the company, its business model, its competitive moat, and core industry context.
+Write at least 3-4 dense, insightful paragraphs.
 
 Company Name: ${state.companyName}
 Industry: ${state.financials?.industry || "Unknown"}
@@ -130,8 +130,9 @@ export async function analyzeSwotNode(state: typeof AgentState.State) {
 
   const model = getModel();
   
-  const prompt = `You are a professional financial analyst.
-Perform a SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) and a Risk analysis based on the following data for ${state.companyName}.
+  const prompt = `You are an elite Wall Street financial analyst.
+Perform a highly detailed SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) and a Risk analysis based on the following data for ${state.companyName}.
+Provide deeply insightful, data-backed points for each category. Don't just list basic facts; provide strategic analysis. Include at least 4-5 substantial points per category.
 
 Financial Metrics:
 - Market Cap: ${state.financials?.marketCap}
@@ -146,11 +147,11 @@ ${state.news.map((n, i) => `${i + 1}. ${n.title} (${n.publisher})`).join("\n")}
 
 Respond ONLY in valid JSON format matching this structure:
 {
-  "strengths": ["point 1", "point 2"],
-  "weaknesses": ["point 1", "point 2"],
-  "opportunities": ["point 1", "point 2"],
-  "threats": ["point 1", "point 2"],
-  "risks": ["point 1", "point 2"]
+  "strengths": ["detailed point 1", "detailed point 2"],
+  "weaknesses": ["detailed point 1", "detailed point 2"],
+  "opportunities": ["detailed point 1", "detailed point 2"],
+  "threats": ["detailed point 1", "detailed point 2"],
+  "risks": ["detailed point 1", "detailed point 2"]
 }
 `;
 
@@ -180,7 +181,7 @@ export async function generateRecommendationNode(state: typeof AgentState.State)
 
   const model = getModel();
   
-  const prompt = `You are an elite Investment Manager. 
+  const prompt = `You are an elite Investment Portfolio Manager at a top hedge fund. 
 Synthesize all the research for ${state.companyName} and provide a final investment recommendation.
 
 Overview: ${state.overview}
@@ -192,7 +193,7 @@ Recent News: ${state.news.map(n => n.title).join(" | ")}
 
 You must decide whether this stock is a BUY, HOLD, or AVOID.
 Also provide a confidence score from 0 to 100 based on the strength of the data.
-Finally, provide a detailed reasoning (2-3 paragraphs) explaining your decision.
+Finally, provide a very detailed reasoning (3-4 dense paragraphs) explaining your decision. Include a brief bull and bear case in your reasoning to show a balanced view.
 
 Respond ONLY in valid JSON format matching this structure:
 {

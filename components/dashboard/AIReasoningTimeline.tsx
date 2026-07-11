@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { Progress } from "@/components/ui/progress";
 
 const steps = [
-  { id: 1, name: "Resolving Company & Ticker", duration: 1500 },
-  { id: 2, name: "Gathering Financial Data", duration: 2500 },
-  { id: 3, name: "Fetching Latest News", duration: 2000 },
-  { id: 4, name: "Analyzing Business Model", duration: 3000 },
-  { id: 5, name: "Performing SWOT Analysis", duration: 3500 },
-  { id: 6, name: "Generating Final Recommendation", duration: 4000 },
+  { id: 1, name: "Resolving Company & Ticker", duration: 800 },
+  { id: 2, name: "Gathering Financial Data", duration: 1200 },
+  { id: 3, name: "Fetching Latest News", duration: 1000 },
+  { id: 4, name: "Analyzing Business Model", duration: 1500 },
+  { id: 5, name: "Performing SWOT Analysis", duration: 1800 },
+  { id: 6, name: "Generating Final Recommendation", duration: 2000 },
 ];
 const TOTAL_DURATION = steps.reduce((acc, step) => acc + step.duration, 0);
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Hero } from "@/components/dashboard/Hero";
 import { AIReasoningTimeline } from "@/components/dashboard/AIReasoningTimeline";
 import { InvestmentReport } from "@/components/dashboard/InvestmentReport";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { toast } from "sonner";
 import { AlertTriangle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -43,8 +44,13 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start p-4 sm:p-8 lg:p-24 relative overflow-hidden">
+      {/* Theme Toggle Top Right */}
+      <div className="absolute top-4 right-4 sm:top-8 sm:right-8 z-50">
+        <ThemeToggle />
+      </div>
+
       {/* Background ambient lighting */}
-      <div className="absolute top-0 -z-10 h-full w-full bg-background">
+      <div className="absolute top-0 -z-10 h-full w-full bg-background transition-colors duration-500">
         <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.1)] opacity-50 blur-[80px]"></div>
         <div className="absolute top-auto bottom-0 left-0 right-auto h-[500px] w-[500px] translate-x-[10%] -translate-y-[20%] rounded-full bg-[rgba(59,130,246,0.1)] opacity-50 blur-[80px]"></div>
       </div>
