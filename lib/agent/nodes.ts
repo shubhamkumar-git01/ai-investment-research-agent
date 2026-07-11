@@ -1,5 +1,6 @@
 import { AgentState } from "./state";
-import yahooFinance from "yahoo-finance2";
+import YahooFinance from "yahoo-finance2";
+const yahooFinance = new YahooFinance();
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 
 const getModel = () => {
