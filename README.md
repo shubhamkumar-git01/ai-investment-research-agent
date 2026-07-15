@@ -39,7 +39,14 @@ It leverages **LangGraph** and **Google Gemini** to autonomously fetch, analyze,
 - **🧠 Autonomous Agentic Workflow**: Uses LangGraph to manage stateful, multi-step AI reasoning (Resolve -> Financials -> News -> Overview -> SWOT -> Verdict).
 - **📊 Real-time Fintech API Integration**: Integrates with Yahoo Finance RESTful APIs for live market caps, P/E ratios, margins, and recent news.
 - **⚡ Server-Side Logic & Microservices**: Built on Node.js/Next.js architecture to handle heavy data processing and AI synthesis securely on the backend.
-- **🎨 Premium Responsive UI**: Built with Next.js 15, React.js, Tailwind CSS, and Framer Motion. Features a stunning, mobile-first, dark-themed interactive user experience with micro-animations.
+- **🎨 Premium Responsive UI**: Built with Next.js 15, React.js, Tailwind CSS, and Framer Motion. 
+
+## 💎 User Experience & Visual Design
+
+- **Cinematic Dark Mode**: Features a sleek, modern dark-themed interface optimized for long reading sessions and professional financial analysis.
+- **Micro-animations & Fluidity**: Utilizes Framer Motion for staggered list reveals, smooth layout transitions, and interactive hover states that make the application feel alive.
+- **Skeleton Loaders & State Management**: Implements polished skeleton loading states during API fetch and AI synthesis phases, ensuring the user is always aware of the agent's progress.
+- **Responsive Layout**: 100% mobile-first design ensuring Wall Street-grade research is readable on any device without compromising on data density.
 - **📄 Structured Insight Cards**: Automatically formats complex financial analysis into easy-to-read Summary, Risks, Sentiment, and Actionable Angle cards.
 
 ## 🏗️ System Architecture
