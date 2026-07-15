@@ -9,14 +9,14 @@
 
 <br/>
 
-A state-of-the-art **AI-powered Investment Research Agent** built for the InsideIIM AI Labs assignment. This platform leverages **LangGraph** and **Google Gemini** to autonomously fetch, analyze, and synthesize public financial data into a comprehensive, Wall Street-grade investment report.
+A state-of-the-art **AI-powered Investment Research Agent** built to deliver modular, high-performance features for the **Fintech ecosystem**. This platform leverages **LangGraph** and **Google Gemini** to autonomously fetch, analyze, and synthesize public financial data via RESTful APIs into a comprehensive, Wall Street-grade investment report. It features a highly responsive, mobile-first web interface that seamlessly integrates user-facing elements with robust server-side logic.
 
 ## ✨ Features
 
 - **🧠 Autonomous Agentic Workflow**: Uses LangGraph to manage stateful, multi-step AI reasoning (Resolve -> Financials -> News -> Overview -> SWOT -> Verdict).
-- **📊 Real-time Financial Data**: Integrates with Yahoo Finance API for live market caps, P/E ratios, margins, and recent news.
-- **⚡ Blazing Fast AI**: Powered by Google's latest `gemini-1.5-flash` model for incredibly rapid deep-dive analysis.
-- **🎨 Premium SaaS UI**: Built with Next.js 15, Tailwind CSS, and Framer Motion for a stunning, glassmorphic, and animated user experience.
+- **📊 Real-time Fintech API Integration**: Integrates with Yahoo Finance RESTful APIs for live market caps, P/E ratios, margins, and recent news.
+- **⚡ Server-Side Logic & Microservices**: Built on Node.js/Next.js architecture to handle heavy data processing and AI synthesis securely on the backend.
+- **🎨 Premium Responsive UI**: Built with Next.js 15, React.js, Tailwind CSS, and Framer Motion for a stunning, mobile-first, interactive user experience.
 - **🌙 Theme Support**: Fully responsive design with an integrated Light/Dark mode toggle.
 - **📄 Export & Share**: One-click functionality to copy the AI summary to clipboard or export the full report as a PDF.
 
